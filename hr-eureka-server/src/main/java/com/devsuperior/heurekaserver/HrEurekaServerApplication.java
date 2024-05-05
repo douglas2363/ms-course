@@ -2,7 +2,9 @@ package com.devsuperior.heurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
+@EnableEurekaServer // Habilita o Eureka Server
 @SpringBootApplication
 public class HrEurekaServerApplication {
 
