@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 @FeignClient(name = "hr-worker", path = "/workers")
 public interface WorkerFeiginClient {
 
+    /**
+     * tipo de chamada webservice que ira fazer
+     * @param id
+     * @return
+     */
     @GetMapping(value = "/{id}")
     ResponseEntity<Worker> findById(@PathVariable Long id);
 }
