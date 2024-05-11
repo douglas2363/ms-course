@@ -26,23 +26,26 @@ public class WorkerResource {
     private static Environment env;
 
     @Autowired
-    private WorkerRepository repository;
+    private WorkerRepository workerRepository;
 
 
     public WorkerResource(WorkerRepository repository) {
-        this.repository = repository;
+        this.workerRepository = repository;
     }
 
     @GetMapping
     public ResponseEntity <List<Worker>> findAll() {
-        List<Worker> list = repository.findAll();
+        List<Worker> list = workerRepository.findAll();
         return ResponseEntity.ok(list);
     }
 
-    @GetMapping (value = "/{id}")
-    public ResponseEntity <Worker> findById(@PathVariable Long id) {
-        logger.info("PORT = " + env.getProperty("local.server.port"));
-        Worker obj = repository.findById(id).get();
-         return ResponseEntity.ok(obj);
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<Worker> findById(@PathVariable Long id) {
+        Worker obj = workerRepository.findById(id).orElse(null);
+        if (obj == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(obj);
     }
 }
+

@@ -20,3 +20,4 @@ public interface WorkerFeiginClient {
     @GetMapping(value = "/{id}")
     ResponseEntity<Worker> findById(@PathVariable Long id);
 }
+

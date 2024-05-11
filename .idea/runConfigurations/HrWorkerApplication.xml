@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="HrWorkerApplication8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" activateToolWindowBeforeRun="false">
+  <configuration default="false" name="HrWorkerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" activateToolWindowBeforeRun="false">
     <option name="ALTERNATIVE_JRE_PATH" value="zulu-11" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-    <envs>
-      <env name="-Dserver.port" value="8001" />
-    </envs>
     <module name="hr-worker" />
+    <selectedOptions>
+      <option name="environmentVariables" />
+    </selectedOptions>
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.devsuperior.hrworker.HrWorkerApplication" />
     <method v="2">
       <option name="Make" enabled="true" />
