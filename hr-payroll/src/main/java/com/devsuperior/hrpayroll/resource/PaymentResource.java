@@ -25,6 +25,7 @@ public class PaymentResource {
     public ResponseEntity<Payment> getPayment(@PathVariable Long workerId, @PathVariable Integer days) {
         Payment payment = service.getPayment(workerId, days);
         return ResponseEntity.ok(payment);
+        
     }
     public ResponseEntity<Payment> getPaymentAlternative(Long workerId, Integer days) {
         Payment payment = new Payment("Brann", 400.0, days);
