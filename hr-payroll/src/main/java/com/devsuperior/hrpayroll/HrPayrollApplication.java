@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableCircuitBreaker // Habilita o Hystrix
 @EnableEurekaClient // Registra o microserviço no Eureka Server
-@EnableFeignClients
+@EnableFeignClients // Habilita o Feign para comunicação entre microserviços
 @SpringBootApplication
 public class HrPayrollApplication {
 
