@@ -16,7 +16,7 @@ public class UserResource {
     @Autowired
     private UserRepository userRepository;
 
-        @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<User> findById(@PathVariable Long id) {
         User obj = userRepository.findById(id).orElse(null);
         if (obj == null) {
